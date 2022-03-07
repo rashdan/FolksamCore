@@ -1,0 +1,26 @@
+{
+  "995e3010ff58a4358f8cf0676978e2d5847a0e44f3489fcc9a7507340537c978": {
+    "name": "GetUser",
+    "source": "query GetUser {\n  user {\n    __typename\n    email\n    address {\n      __typename\n      postalcode\n      street\n      subregion\n    }\n    telephone\n    customernumber\n    person {\n      __typename\n      firstname\n      surname\n      birthdate\n    }\n  }\n}"
+  },
+  "806aa4868503577739b738c3eb5615e892c1307a769deaf7c114b120bef720df": {
+    "name": "GetCases",
+    "source": "query GetCases {\n  cases {\n    __typename\n    title\n    id\n    desc\n    metadata {\n      __typename\n      user_has_unread_message\n    }\n    comments {\n      __typename\n      body\n      timestamp\n      isUser\n    }\n  }\n}"
+  },
+  "491f5a6ce6588a2aababd5d67f3c585566cf4049d372e035e75bc6acc46a92ff": {
+    "name": "GetClaims",
+    "source": "query GetClaims {\n  claims {\n    __typename\n    id\n    status\n    personId\n    customerId\n    clientId\n    branchCode\n    eventDate\n    admin\n    policyId\n    settlementDate\n    settlementCost\n    elements\n  }\n}"
+  },
+  "8254f8d02c78382d05ed9d0635d0778c3b414b9e84c09a7f6a4a02e10ce6fac3": {
+    "name": "GetPolicies",
+    "source": "query GetPolicies {\n  policies {\n    __typename\n    policyId\n    groupPolicyId\n    product\n    annullmentDate\n    validToDate\n    endedReasonText\n    items {\n      __typename\n      itemType\n      elements {\n        __typename\n        elementText\n      }\n    }\n  }\n}"
+  },
+  "7c1ff769269bd0b5df8d86a6c842287ac8fa9f2645499b16285a26cbacbf2aed": {
+    "name": "GetUserAndPolicies",
+    "source": "query GetUserAndPolicies {\n  user {\n    __typename\n    email\n    address {\n      __typename\n      postalcode\n      street\n      subregion\n    }\n    telephone\n    customernumber\n    person {\n      __typename\n      firstname\n      surname\n      birthdate\n    }\n  }\n  policies {\n    __typename\n    policyId\n    groupPolicyId\n    product\n    annullmentDate\n    validToDate\n    endedReasonText\n    items {\n      __typename\n      itemType\n      elements {\n        __typename\n        elementText\n      }\n    }\n  }\n}"
+  },
+  "6d026b179f87bb00e2ce0ba3c9f84dc955924e98513aebbc77aa9dfcb458734b": {
+    "name": "CreateCase",
+    "source": "mutation CreateCase($title: String!, $desc: String!) {\n  createCase(type: CLAIM, category: CLAIM, title: $title, desc: $desc) {\n    __typename\n    id\n    title\n    desc\n  }\n}"
+  }
+}

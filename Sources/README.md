@@ -5,13 +5,20 @@
 [![License](https://img.shields.io/cocoapods/l/FolksamCore.svg?style=flat)](https://cocoapods.org/pods/FolksamCore)
 [![Platform](https://img.shields.io/cocoapods/p/FolksamCore.svg?style=flat)](https://cocoapods.org/pods/FolksamCore)
 
+## Example
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
 
 ## Installation
 
-FolksamCore is available through [Swift Package Manager](https://www.swift.org/package-manager/). To install it, simply add the dependecy to your project:
+FolksamCore is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
 
+```ruby
+pod 'FolksamCore'
+```
 
 ## Author
 
